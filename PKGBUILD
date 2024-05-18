@@ -22,13 +22,13 @@ _upstreamdate=20240426
 _wikidate=20240420
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
-pkgrel=2
+pkgrel=3
 pkgdesc='The Open Source edition of Google Japanese Input bundled with the UT dictionary with IBus integration'
 arch=('x86_64')
 url='https://github.com/google/mozc'
 license=('Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC0-1.0 AND CC-BY-SA-3.0 AND CC-BY-SA-4.0 AND GPL-2.0-only AND GPL-2.0-or-later AND MIT AND NAIST-2003 AND Unicode-3.0 AND LicenseRef-Okinawa-Dictionary')
 depends=('qt6-base')
-makedepends=('bazel' 'git' 'python' 'rsync' 'ruby' 'wget' 'gcc13')
+makedepends=('bazel' 'git' 'python' 'rsync' 'ruby' 'wget')
 provides=("mozc=${_pkgverbase}" "ibus-mozc=${_pkgverbase}")
 conflicts=('mozc' 'mozc-ut' 'ibus-mozc')
 options=(!distcc !ccache)
@@ -98,8 +98,7 @@ build() {
     export JAVA_HOME='/usr/lib/jvm/java-11-openjdk/'
 
     # Temp fix for GCC 14
-    export CC='/usr/bin/gcc-13'
-    export CXX='/usr/bin/g++-13'
+    sed -i -e '/Werror/d' third_party/protobuf/build_defs/cpp_opts.bzl
 
     bazel build server:mozc_server gui/tool:mozc_tool renderer/qt:mozc_renderer unix/ibus:ibus_mozc unix/icons --config oss_linux --compilation_mode opt
 }
