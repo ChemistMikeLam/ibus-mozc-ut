@@ -17,12 +17,12 @@ ENABLED_DICTIONARIES=(
 'sudachidict'
 )
 
-_pkgverbase=2.30.5448.102
-_upstreamdate=20240426
-_wikidate=20240420
+_pkgverbase=2.30.5490.102
+_upstreamdate=20240609
+_wikidate=20240501
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
-pkgrel=3
+pkgrel=1
 pkgdesc='The Open Source edition of Google Japanese Input bundled with the UT dictionary with IBus integration'
 arch=('x86_64')
 url='https://github.com/google/mozc'
@@ -32,7 +32,7 @@ makedepends=('bazel' 'git' 'python' 'rsync' 'ruby' 'wget')
 provides=("mozc=${_pkgverbase}" "ibus-mozc=${_pkgverbase}")
 conflicts=('mozc' 'mozc-ut' 'ibus-mozc')
 options=(!distcc !ccache)
-source=("${pkgname}-git::git+https://github.com/google/mozc.git#commit=c50bd32a0931d558797d71cfc11091ee17c55ac1"
+source=("${pkgname}-git::git+https://github.com/google/mozc.git#commit=7967c42e5585d0789fe6565bf366afba8b31fcbf"
         'git+https://github.com/utuhiro78/merge-ut-dictionaries.git#commit=7d8a3f9df79e4bf38ab973a64dbc2cd562f2306e'
         'git+https://github.com/utuhiro78/mozcdic-ut-alt-cannadic.git#commit=4e548e6356b874c76e8db438bf4d8a0b452f2435'
         'git+https://github.com/utuhiro78/mozcdic-ut-edict2.git#commit=4a08ebf0397c65991b5f6d7f4dd2cbc583a12c83'
@@ -44,7 +44,7 @@ source=("${pkgname}-git::git+https://github.com/google/mozc.git#commit=c50bd32a0
         'git+https://github.com/utuhiro78/mozcdic-ut-sudachidict.git#commit=c109f062a6c80e52be4b96adbf4123404b2048d1'
         "https://dumps.wikimedia.org/jawiki/${_wikidate}/jawiki-${_wikidate}-all-titles-in-ns0.gz")
 noextract=("jawiki-${_wikidate}-all-titles-in-ns0.gz")
-sha256sums=('f1f7bb38dce2fae8884bd26a6b26a838128d244bf98faae18f43b789da04ff2e'
+sha256sums=('72b43e715364e9ea40336e4733689b528e4a8a59cd6e6df09c1492f204a62c4a'
             '3ecd05af2f57e6c803e0798fa74a36580d541229e28b5d15f446b12ec367c9e4'
             '89317143e6396f2f8b4265a932c7f3607f55210854a3f5ccb9b265c1d222f6ed'
             'e20c9d7b490a8c71b9d974ab4bc56e031493388e53fe959dd1da0373aaef84dc'
@@ -54,7 +54,7 @@ sha256sums=('f1f7bb38dce2fae8884bd26a6b26a838128d244bf98faae18f43b789da04ff2e'
             '6144ac853ed47a9a2f8022887253c0ff1883b3a5b9470396b2ce84dbf2c91c59'
             '7ef9d90e6dd00af84fa5e14026fda54bbaa1c30fb03dfed2365c4043292bb39a'
             'bbe04bc6b9768b1c167788cb417aefad9f0a1ac60a63ea5a2bfd2056b7aa32c2'
-            '6e9d3553b776e26b1ba5ba7f51bbeeeb1b0540e335f9bd08b2e01d805d28a5b7')
+            '1f064a117c45c80486cffa158855ad26b5c35fd93dc92cb4dce5b83f12154874')
 
 prepare() {
     cd ${pkgname}-git/src
