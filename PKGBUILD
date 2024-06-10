@@ -19,7 +19,7 @@ ENABLED_DICTIONARIES=(
 
 _pkgverbase=2.30.5490.102
 _upstreamdate=20240609
-_wikidate=20240501
+_wikidate=20240520
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
 pkgrel=1
@@ -54,7 +54,7 @@ sha256sums=('72b43e715364e9ea40336e4733689b528e4a8a59cd6e6df09c1492f204a62c4a'
             '6144ac853ed47a9a2f8022887253c0ff1883b3a5b9470396b2ce84dbf2c91c59'
             '7ef9d90e6dd00af84fa5e14026fda54bbaa1c30fb03dfed2365c4043292bb39a'
             'bbe04bc6b9768b1c167788cb417aefad9f0a1ac60a63ea5a2bfd2056b7aa32c2'
-            '1f064a117c45c80486cffa158855ad26b5c35fd93dc92cb4dce5b83f12154874')
+            '1cc42eb58b8a888edf5e66e2bd2d26220747b10bbab7a59d54556b9f2c3c248c')
 
 prepare() {
     cd ${pkgname}-git/src
