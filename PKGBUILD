@@ -19,10 +19,10 @@ ENABLED_DICTIONARIES=(
 
 _pkgverbase=2.30.5490.102
 _upstreamdate=20240609
-_wikidate=20240501
+_wikidate=20240620
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
-pkgrel=1
+pkgrel=2
 pkgdesc='The Open Source edition of Google Japanese Input bundled with the UT dictionary with IBus integration'
 arch=('x86_64')
 url='https://github.com/google/mozc'
@@ -54,7 +54,7 @@ sha256sums=('72b43e715364e9ea40336e4733689b528e4a8a59cd6e6df09c1492f204a62c4a'
             '6144ac853ed47a9a2f8022887253c0ff1883b3a5b9470396b2ce84dbf2c91c59'
             '7ef9d90e6dd00af84fa5e14026fda54bbaa1c30fb03dfed2365c4043292bb39a'
             'bbe04bc6b9768b1c167788cb417aefad9f0a1ac60a63ea5a2bfd2056b7aa32c2'
-            '1f064a117c45c80486cffa158855ad26b5c35fd93dc92cb4dce5b83f12154874')
+            'b8bdd8ae8ee65cb33ef5bee4b543d031950f093b76ef916c15de8902066d8d96')
 
 prepare() {
     cd ${pkgname}-git/src
@@ -95,7 +95,7 @@ build() {
 
     unset ANDROID_NDK_HOME
     unset ANDROID_HOME
-    export JAVA_HOME='/usr/lib/jvm/java-11-openjdk/'
+    export JAVA_HOME='/usr/lib/jvm/java-21-openjdk/'
 
     # Temp fix for GCC 14
     sed -i -e '/Werror/d' third_party/protobuf/build_defs/cpp_opts.bzl
