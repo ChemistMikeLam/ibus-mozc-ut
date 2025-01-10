@@ -17,9 +17,9 @@ ENABLED_DICTIONARIES=(
 'sudachidict'
 )
 
-_pkgverbase=2.30.5520.102
-_upstreamdate=20240721
-_wikidate=20240701
+_pkgverbase=2.30.5544.102
+_upstreamdate=20240731
+_wikidate=20240720
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
 pkgrel=1
@@ -32,7 +32,7 @@ makedepends=('bazel' 'git' 'python' 'qt6-base')
 provides=("mozc=${_pkgverbase}" "ibus-mozc=${_pkgverbase}")
 conflicts=('mozc' 'mozc-ut' 'ibus-mozc')
 options=(!distcc !ccache)
-source=('git+https://github.com/google/mozc.git#commit=d2fc9c7d9269cc84b9a4a680cafc382a55e90f42'
+source=('git+https://github.com/google/mozc.git#commit=5e6abfe1853b080766def432b746a9bed79e54b0'
         'git+https://github.com/abseil/abseil-cpp.git#commit=2f9e432cce407ce0ae50676696666f33a77d42ac'
         'git+https://github.com/google/breakpad.git#commit=216cea7bca53fa441a3ee0d0f5fd339a3a894224'
         'git+https://github.com/google/googletest.git#commit=58d77fa8070e8cec2dc1ed015d66b454c8d78850'
@@ -40,15 +40,15 @@ source=('git+https://github.com/google/mozc.git#commit=d2fc9c7d9269cc84b9a4a680c
         'git+https://github.com/hiroyuki-komatsu/japanese-usage-dictionary.git#commit=e5b3425575734c323e1d947009dd74709437b684'
         'git+https://github.com/protocolbuffers/protobuf.git#commit=a978b75794a6ce4547c9db08a115c458d9190934'
         'git+https://github.com/microsoft/wil.git#commit=fc5dbf55989fe20351c71d038a8d12de4b397a6d'
-        'git+https://github.com/utuhiro78/merge-ut-dictionaries.git#commit=95582779c7f906aaacf97625f565a1e7af0c1fae'
-        'git+https://github.com/utuhiro78/mozcdic-ut-alt-cannadic.git#commit=b3d151c189c55b00e3e384ddb847cc76b3565746'
-        'git+https://github.com/utuhiro78/mozcdic-ut-edict2.git#commit=a3febcb019454af445809965d4f64baddd962c73'
-        'git+https://github.com/utuhiro78/mozcdic-ut-jawiki.git#commit=263fe3243f98e1a9438f8f4c3bf1ae5ade371a6c'
-        'git+https://github.com/utuhiro78/mozcdic-ut-neologd.git#commit=c1524034b08fad881957d72f5b29931cc5964f8c'
-        'git+https://github.com/utuhiro78/mozcdic-ut-personal-names.git#commit=e1049584984ac9376685937661ae18c968e25c48'
-        'git+https://github.com/utuhiro78/mozcdic-ut-place-names.git#commit=99cb804417a5816933d87ac9d2caeb993ea98339'
-        'git+https://github.com/utuhiro78/mozcdic-ut-skk-jisyo.git#commit=d5bf4e970e35c0ccd51c3a24ff301ed1d0770cef'
-        'git+https://github.com/utuhiro78/mozcdic-ut-sudachidict.git#commit=1aa3d3d56bf26a77010febfa87e1a6c745770dd7'
+        'git+https://github.com/utuhiro78/merge-ut-dictionaries.git#commit=1f1cdcf545b952f84fdad78d58c0db7a662b592d'
+        'git+https://github.com/utuhiro78/mozcdic-ut-alt-cannadic.git#commit=50fee0397b87fe508f9edd45bac56f5290d8ce66'
+        'git+https://github.com/utuhiro78/mozcdic-ut-edict2.git#commit=b2112277d0d479b9218f42772356da3601b3e8cf'
+        'git+https://github.com/utuhiro78/mozcdic-ut-jawiki.git#commit=29dd6d3202119d88a2356a11300b7b338f5cb950'
+        'git+https://github.com/utuhiro78/mozcdic-ut-neologd.git#commit=b7035b88db25ad1a933f05a33f193711c6c3b2db'
+        'git+https://github.com/utuhiro78/mozcdic-ut-personal-names.git#commit=5df5cedaef3b55c509cacfbf3e97ded852535a1b'
+        'git+https://github.com/utuhiro78/mozcdic-ut-place-names.git#commit=5c2167541200528d8b25214c52be7a4c3dd3b89b'
+        'git+https://github.com/utuhiro78/mozcdic-ut-skk-jisyo.git#commit=7300f19e6a3f27334ed7af64589de8782549a13f'
+        'git+https://github.com/utuhiro78/mozcdic-ut-sudachidict.git#commit=a754f1fff5fded62cc066aa6be0ab0169059a144'
         "https://dumps.wikimedia.org/jawiki/${_wikidate}/jawiki-${_wikidate}-all-titles-in-ns0.gz")
 noextract=("jawiki-${_wikidate}-all-titles-in-ns0.gz")
 sha256sums=('195f1218deae0daa22a6ae0e2b2f42eb900e314e3442ef549b6f9d666aa68644'
@@ -59,16 +59,16 @@ sha256sums=('195f1218deae0daa22a6ae0e2b2f42eb900e314e3442ef549b6f9d666aa68644'
             '10a13d356071f2b0c2b6dcab1d841fae451f6a2020ee9b901533533fc7ac3008'
             'f09520ceeb7f1f1bb7e1cb61a8cd7a490fff84302ed5dc91f923f0e82ee191dc'
             'abb86ac4d546c98d7d9a10fdeb1059d6e3395e892d5397fb03179361f37c98fe'
-            '3ee1ed7438f7ad3963ed4129a47ff7ac7d72b56f6d9c48da9e19d00f72d80541'
-            '80f0189f8047a3cb28d45d8309f1908e53dce00ddb1ca087aeff7b410839ecef'
-            '1366916e2d07d6e66fab69ba1d46a2d1b786d563a3e82f5a92978117e9b24a65'
-            '12d3988f49be34e5f9b0f5f05c7ac85491654f905c90e90b493b6920b6886a59'
-            'c190da70b1e35bae2e58d568d5e1ed4f05e9941e7265fe45d252b951f00dbd2d'
-            'ce1341bbcfe4488f95e5c2d4bf9e4157817ed834d2e25a476ba6f3591b65fba3'
-            '0ed13d4ab3c2aebf8389b4fbcf88c877fb5e62d06a653b1b2c0f78ad6e82ecab'
-            'f701e403045a39dbf8113e6482941681caf57443f447db4d4ec5ec3dc66ecf87'
-            '9d67b0375cb50a7ad879847f05c4fdaaba1b45a667dad77d3e8a60acd8baaa14'
-            'b6c426a38d5c9f41547e48c8c5a8a7955e012119d231e701ae5437bf700a622a')
+            '8f81d5ea8044007af572a7432f1f7a2b40f4506a71dfa139239b976b4bdd5ddb'
+            '1e7a58fcac2599be29b0ced9cb0bb8210703c1a568e06038d2779106a100a33a'
+            '86e95d1aba4b2ab5ec67f7b2d59d14fd1d20ecf08ef4e12f7c20e122ee61d2b1'
+            '05d9e8bd344a51d41905f0d8010dede5b26f5e4ba871b07f861d317e7b0c4be5'
+            'b348668059cc75744b4eb82fb8ae1c0cc72a4dc6d24c430db652db0090149534'
+            '5d26dfb78283e515f4a1d9b4a0c3319b9240f2b708d5499cc3c01bb2e9f29f3d'
+            '657be228b7e16bda1c551622835ad7f1ea76fdee5a1a257bdfa332ea32ebecfe'
+            '5afa03b188822e5e056dc7517e838935f5c5547f8cb2adee4c60059805850b97'
+            'd58121b2b1166d7349e95e331571111282b524003b5ee3e53db9cd5150ba439f'
+            'b7c43de8540468e26cd5c73dc924ab558c83e08fc3bdf5e1e94c6f5111c71d69')
 
 prepare() {
     cd mozc/src
@@ -90,7 +90,7 @@ prepare() {
 
     # Use a dated snapshot for the JAWiki dump data
     sed -i -e '/wget/d' count_word_hits.py
-    sed -i -e "s|filename = \"jawiki-|filename = \"${srcdir}/jawiki-|g" count_word_hits.py
+    sed -i -e "s|file_name = \"jawiki-|file_name = \"${srcdir}/jawiki-|g" count_word_hits.py
     sed -i -e "s|jawiki-[a-z0-9]\{6,8\}|jawiki-${_wikidate}|g" count_word_hits.py apply_word_hits.py
 
     # Compile the UT dictionary
