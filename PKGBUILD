@@ -22,13 +22,13 @@ _upstreamdate=20260116
 _wikidate=20260101
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
-pkgrel=1
-pkgdesc='The Open Source edition of Google Japanese Input bundled with the UT dictionary with IBus integration'
+pkgrel=2
+pkgdesc='The Open Source edition of Google Japanese Input (UT dictionary) with IBus integration'
 arch=('x86_64')
 url='https://github.com/google/mozc'
 license=('Apache-2.0 AND BSD-2-Clause AND BSD-3-Clause AND CC0-1.0 AND CC-BY-SA-3.0 AND CC-BY-SA-4.0 AND GPL-2.0-only AND GPL-2.0-or-later AND MIT AND NAIST-2003 AND Unicode-3.0 AND LicenseRef-Okinawa-Dictionary')
 depends=('ibus>=1.4.1' 'qt6-base')
-makedepends=('bazel' 'git' 'python' 'qt6-base')
+makedepends=('bazelisk' 'git' 'python' 'qt6-base' 'unzip')
 provides=("mozc=${_pkgverbase}" "ibus-mozc=${_pkgverbase}")
 conflicts=('mozc' 'mozc-ut' 'ibus-mozc')
 options=(!distcc !ccache)
@@ -123,7 +123,7 @@ build() {
     unset ANDROID_HOME
     export JAVA_HOME='/usr/lib/jvm/java-21-openjdk/'
 
-    bazel build server:mozc_server gui/tool:mozc_tool renderer/qt:mozc_renderer unix/ibus:ibus_mozc unix/icons --config oss_linux --compilation_mode opt
+    bazelisk build server:mozc_server gui/tool:mozc_tool renderer/qt:mozc_renderer unix/ibus:ibus_mozc unix/icons --config oss_linux --config release_build
 }
 
 package() {
