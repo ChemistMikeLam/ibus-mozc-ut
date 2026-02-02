@@ -19,10 +19,10 @@ ENABLED_DICTIONARIES=(
 
 _pkgverbase=3.33.6079.102
 _upstreamdate=20260116
-_wikidate=20260101
+_wikidate=20260201
 pkgname='ibus-mozc-ut'
 pkgver=${_pkgverbase}.u${_upstreamdate}.w${_wikidate}
-pkgrel=2
+pkgrel=1
 pkgdesc='The Open Source edition of Google Japanese Input (UT dictionary) with IBus integration'
 arch=('x86_64')
 url='https://github.com/google/mozc'
@@ -68,7 +68,7 @@ b2sums=('6e870edc1fc387dd08c5649a6431ee81f928397e84c7182e4bf5001c1b1509c97ffae9a
         '6400f16871b7b958e95cdcaa59a82381afe16107b86123000c97195c4aa50862db40a22c6d36744fb8ba01403c817fb7fd9917441a369dd2540bc55cf39f903a'
         '3c63f51241bd659e5841f26b11620ce755663aafe2a7c750738bb840df2e50de6b033f6cbf43e8a74258b1d07e86f1487b4caf1954e99354ce8f526ab469623a'
         'fad5b6d720c6e4a76947a790ac727fbacd03d6da76802b7f75b1f07fcdeae88bd401d0ba130073e4804efca481aaedf039c7a9e60b5c07f7eb5ed42cd3470839'
-        '6962c16c1fa034265b895dcbc33d10bdcc3bb4c3ea405e0f278acc821098f00a62fae197598abaa9ea71110aa00623f4e71a52e2f5995f4ab3cce8888a3eb533')
+        '51ef710b3dadd11cabeacc5a19d4d4a0ad5eb28576c5a9b888c8051a9df3a68353609b3f05db57c81bdc01cbe91ef918b4e0830de8156bc05ce08755ffdb4cdc')
 
 prepare() {
     cd mozc/src
