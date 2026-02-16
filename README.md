@@ -8,10 +8,9 @@ I have extracted some variables to help maintainability.
 
 ## License
 
-PKGBUILD scripts don't usually carry copyright notices or licenses in the AUR; the upstreams are no exceptions.
+Upstream has licensed their PKGBUILD in 0BSD, in accordance with [RFC 40](https://rfc.archlinux.page/0040-license-package-sources/).
 
-Moreover, it seems that PKGBUILD scripts are usually considered non-copyrightable (see, for example, [here](https://bbs.archlinux.org/viewtopic.php?id=58586) and [here](https://bbs.archlinux.org/viewtopic.php?id=252234)).
+Upstream also provided a [REUSE.toml](REUSE.toml), in accordance with [RFC 52](https://rfc.archlinux.page/0052-reuse/).
 
-In any case, if any of my contributions are copyrightable, they are hereby released under the [CC0 License version 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
+Therefore this repo will also switch license to [0BSD](LICENSE).
 
-However, if you choose to publish a modified version of the PKGBUILD script, please follow the common etiquette of acknowledging all previous contributors (see [here](https://wiki.archlinux.org/title/AUR_submission_guidelines), in the last bullet point under section 1.1 "Rules of submission").
