@@ -1,6 +1,6 @@
 pkgbase = ibus-mozc-ut
 	pkgdesc = The Open Source edition of Google Japanese Input bundled with the UT dictionary and IBus module
-	pkgver = 3.33.6089.102.u20260213.w20260201
+	pkgver = 3.33.6089.102.u20260213.w20260301
 	pkgrel = 1
 	url = https://github.com/google/mozc
 	arch = x86_64
@@ -15,7 +15,7 @@ pkgbase = ibus-mozc-ut
 	conflicts = mozc
 	conflicts = mozc-ut
 	conflicts = ibus-mozc
-	noextract = jawiki-20260201-pages-articles-multistream-index.txt.bz2
+	noextract = jawiki-20260301-pages-articles-multistream-index.txt.bz2
 	noextract = abseil-cpp-20250814.0.tar.gz
 	noextract = apple_support.1.23.1.tar.gz
 	noextract = bazel_features-v1.30.0.tar.gz
@@ -54,7 +54,7 @@ pkgbase = ibus-mozc-ut
 	source = git+https://github.com/utuhiro78/mozcdic-ut-place-names.git#commit=3c054fa8e849f6da5b76ec99f8fc28d555ef5c63
 	source = git+https://github.com/utuhiro78/mozcdic-ut-skk-jisyo.git#commit=384ad926e306d5308839c6dedb63696f11703968
 	source = git+https://github.com/utuhiro78/mozcdic-ut-sudachidict.git#commit=6c8307cb6c8a935707fd7c39f5d116300e7b8d87
-	source = https://dumps.wikimedia.org/jawiki/20260201/jawiki-20260201-pages-articles-multistream-index.txt.bz2
+	source = https://dumps.wikimedia.org/jawiki/20260301/jawiki-20260301-pages-articles-multistream-index.txt.bz2
 	source = git+https://github.com/bazelbuild/bazel-central-registry.git#commit=b340ca17233d8a3452184a0bf5f593000cdad9e4
 	source = https://github.com/bazelbuild/bazel/releases/download/8.4.1/bazel-8.4.1-linux-x86_64
 	source = https://github.com/abseil/abseil-cpp/releases/download/20250814.0/abseil-cpp-20250814.0.tar.gz
@@ -98,7 +98,7 @@ pkgbase = ibus-mozc-ut
 	b2sums = 241db1aec847f49dae19ba51e2239e92b6aec32756b52e0933600743c41aeac2ae0a3e62b0ca31294fcd743481b0e5b862e535422802c802b91bb66844bcef0e
 	b2sums = 3c63f51241bd659e5841f26b11620ce755663aafe2a7c750738bb840df2e50de6b033f6cbf43e8a74258b1d07e86f1487b4caf1954e99354ce8f526ab469623a
 	b2sums = afe2917e93aa170b60fe7d6a2d71a43b233b9774f0ab26a291c384766da76aa3bd9c987a8b27b8385bbb05bd1f5b973f0380fa55ddc404b29553564724e1ad23
-	b2sums = 51ef710b3dadd11cabeacc5a19d4d4a0ad5eb28576c5a9b888c8051a9df3a68353609b3f05db57c81bdc01cbe91ef918b4e0830de8156bc05ce08755ffdb4cdc
+	b2sums = 29f71fcf411bb6484a1dd408cf3299a9dd523f61eddb1e48ec8a9efc93b02c05e4c1e37b93d6a895516b74da6b99a8c994d0f39e974f94ddebd25fe6e3fcdbcd
 	b2sums = eb7c908642670c243f3ef1ac34c59029ab631c7ae8eaca3eb0850f68142d8f3e2f8d894896c12229aea320c92c0ed51bf9112e979a61f0c28f5fb6fd8623c02c
 	b2sums = 50e67de8a5c63f41831a52d5429913185939d6194d0b50d475c554f04c4bc64b4d4ed5e9612a76b4f693d479a58b6e66f46b94f2b2557f24ab4d72c41e4b664c
 	b2sums = f60f3604215f64f33fad902637360050061ec62cfa6413cafc4cd3794a1898c7ee67f7b6edf78e5cb7c6b0ed86b8d80338ad4abee3f2664e391c2cfae5997220
